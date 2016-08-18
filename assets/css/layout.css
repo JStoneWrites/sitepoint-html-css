@@ -18,7 +18,6 @@ layout
   background: #282e37;
 }
 
-.row--banner { background: #aaa; }
 /* row-padding */
 .row--padding-medium
 {
@@ -44,31 +43,22 @@ layout
   padding-right: 1.5em;
 }
 
-.container-narrow
-{
-  max-width: 34em;
-  background: yellow;
-}
+.container-narrow { max-width: 34em; }
 
-.container-medium
-{
-  max-width: 52em;
-  background: green;
-}
+.container-medium { max-width: 52em; }
 
-.container-wide
-{
-  max-width: 58em;
-  background: lime;
-}
+.container-wide { max-width: 58em; }
 
 /* columns */
+.col-narrow,
+.col-narrow--right { margin-bottom: 1.5em; }
+
 
 /* ----------------------------
 wide
 ---------------------------- */
 
-@media (mid-width: 38em)
+@media (min-width: 38em)
 {
   .row--padding-medium
   {
@@ -91,5 +81,24 @@ wide
     margin: 0 auto;
     padding-left: 2em;
     padding-right: 2em;
+  }
+
+  .col-narrow,
+  .col-medium,
+  .col-wide { float: left; }
+
+  .col-narrow--right,
+  .col-wide--right { float: right; }
+
+  .col-wide,
+  .col-wide--right { width: 61%; }
+
+  .col-medium { width: 50%; }
+
+  .col-narrow,
+  .col-narrow--right
+  {
+    width: 25%;
+    margin-bottom: 0;
   }
 }
